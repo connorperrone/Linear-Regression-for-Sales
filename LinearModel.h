@@ -20,9 +20,9 @@ class LinearModel {
   public:
     LinearModel(SalesList& salesList);
 
-    Point getPoint(int index) { return mPoints.at(index); }
+    Point getPoint(int index) const { return mPoints.at(index); }
 
-    string getGraphURL() { return mGraphURL; }
+    string getGraphURL() const { return mGraphURL; }
 
     double getFutureSalesEstimate(int year) { return mMatrixX.getElement(1, 1) + (mMatrixX.getElement(2, 1) * year); }
 

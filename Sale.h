@@ -16,9 +16,9 @@ class Sale {
   public:
     Sale(int year, double amount);
 
-    int getYear() { return mYear; }
-    double getAmount() { return mAmount; }
-    int getSaleID() { return mSaleID; }
+    int getYear() const { return mYear; }
+    double getAmount() const { return mAmount; }
+    int getSaleID() const { return mSaleID; }
 
     void setYear(int year) { mYear = year; }
     void setAmount(int amount) { mAmount = amount; }

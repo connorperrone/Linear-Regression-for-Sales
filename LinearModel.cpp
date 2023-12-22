@@ -9,10 +9,9 @@ struct Entry {
 
 LinearModel::LinearModel(SalesList& salesList) {
   mGraphURL = "";
-  if (salesList.getSales().size() <= 2) return;
   vector<Entry> uniqueYearEntries;
   bool notInList;
-  for (Sale sale : salesList.getSales()) {
+  for (const Sale& sale : salesList.getSales()) {
     notInList = true;
     for (Entry& e : uniqueYearEntries) {
       if (e.year == sale.getYear()) {
@@ -104,6 +103,5 @@ ostream& operator<<(ostream& os, const LinearModel& lm) {
     os << "(" << (int) p.x << ", " << p.y << ")";
     if (i != lm.mPoints.size() - 1) os << " , ";
   }
-  os << endl;
   return os;
 }

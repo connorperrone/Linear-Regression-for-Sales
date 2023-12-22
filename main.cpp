@@ -33,8 +33,8 @@ int main() {
          << "||  (5) Get line of best fit graph URL          ||\n"
          << "||  (6) Estimate sales for future year          ||\n"
          << "||  (7) Exit                                    ||\n"
-         << "==================================================\n";
-    cout << "Select an option (1, 2, 3, 4, 5, 6, or 7): ";
+         << "==================================================\n"
+         << "Select an option (1, 2, 3, 4, 5, 6, or 7): ";
     cin >> choice;
     double year, amount;
     int saleID;
@@ -63,7 +63,7 @@ int main() {
         break;
       }
       case 4: {
-        if (salesList.getSales().size() <= 1) {
+        if (salesList.getSales().size() <= 2) {
           cout << "Unable to calculate linear model. Try adding sales from at least 3 different years." << endl;
           break;
         }

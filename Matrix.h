@@ -19,9 +19,9 @@ public:
 
   Matrix(int rows, int columns);
 
-  int getRows() { return mRows; }
+  int getRows() const { return mRows; }
 
-  int getColumns() { return mColumns; }
+  int getColumns() const { return mColumns; }
 
   double getElement(int rowNumber, int columnNumber) const { return mRowsColumns.at(rowNumber - 1).at(columnNumber - 1); }
 
